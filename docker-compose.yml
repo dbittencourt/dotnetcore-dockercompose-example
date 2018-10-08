@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  demo.webapi:
+    image: demowebapi
+    build:
+      context: backend/
+      dockerfile: Demo.WebApi/Dockerfile
+    ports:
+      - "5000:80"
+  
+  demo.frontend:
+    image: demofrontend
+    build:
+      context: frontend/
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+
+  redis:
+    image: redis
+    ports:
+      - "6739:6379"

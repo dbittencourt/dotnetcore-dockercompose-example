@@ -1,0 +1,14 @@
+.dockerignore
+.env
+.git
+.gitignore
+README.md
+docker-compose.yml
+docker-compose.*.yml
+
+*/bin
+*/obj
+*/.vs
+*/.vscode
+*/build
+*/node_modules
